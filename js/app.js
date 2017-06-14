@@ -18,11 +18,13 @@ angular.module('devmtnTravel', ['ui.router'])
             })
             .state('packages',{
                 url:'/packages/:country',
-                templateUrl:'../views/packages.html'
+                templateUrl:'../views/packages.html',
+                controller:'packagesCtrl'
             })
             .state('booked',{
                 url:'booked/:id',
-                templateUrl:'../views/booked.html'
+                templateUrl:'../views/booked.html',
+                controller:'bookedCtrl'
             })
             .state('locations',{
                 url:'/locations',
