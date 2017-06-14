@@ -9,7 +9,7 @@ angular.module('devmtnTravel', ['ui.router'])
             .state('adventures',{
                 url:'/adventures/',
                 parent:'home',
-                templateUrl:'../views/about-adventures.html'
+                templateUrl:'../views/about-adventurers.html'
             })
             .state('contact',{
                 url:'/contact',
