@@ -79,5 +79,23 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 				id: 3544,
 				price: 1722.12
 			},
-		]
+		];
+    this.getTravelInfo = function(){
+      return this.travelInfo;
+    }
+
+    this.getPackages = function(country){
+      var selectedPackInfo = [];
+      console.log('GetPACKA   ' + country.country)
+      for( var i = 0; i < this.packageInfo.length; i++){
+        console.log('ind '+i+'val '+this.packageInfo[i]);
+        if(this.packageInfo[i].country === country.country){
+          selectedPackInfo.push(this.packageInfo[i])
+        }
+      }
+      console.log(selectedPackInfo);
+      return selectedPackInfo;
+
+  }
+
 })

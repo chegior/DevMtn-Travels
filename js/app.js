@@ -4,7 +4,8 @@ angular.module('devmtnTravel', ['ui.router'])
             .state('home',{
                 url:'/',
                 templateUrl: "../views/about.html",
-                controller:'locationsCtrl'
+                
+
             })
             .state('adventures',{
                 url:'/adventures/',
@@ -22,13 +23,14 @@ angular.module('devmtnTravel', ['ui.router'])
                 controller:'packagesCtrl'
             })
             .state('booked',{
-                url:'booked/:id',
+                url:'/booked/:id',
                 templateUrl:'../views/booked.html',
                 controller:'bookedCtrl'
             })
             .state('locations',{
                 url:'/locations',
-                templateUrl:'../views/locations.html'
+                templateUrl:'../views/locations.html',
+                controller:'locationsCtrl'
             });
 
         $urlRouterProvider

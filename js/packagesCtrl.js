@@ -1,4 +1,12 @@
 angular.module('devmtnTravel').controller('packagesCtrl',function ($scope,$stateParams,mainSrv){
 // injected $stateParams due to this process some data on the URL
-  $scope.test1 = "THIS IS THE PACKAGES";
+console.log($stateParams.country);
+$scope.locations = [];
+
+$scope.selectedPackInfo = function(country){
+  $scope.locations = mainSrv.getPackages(country);
+}
+
+$scope.selectedPackInfo($stateParams);
+console.log($scope.locations);
 })

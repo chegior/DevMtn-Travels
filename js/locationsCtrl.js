@@ -1,4 +1,9 @@
 angular.module('devmtnTravel').controller('locationsCtrl',function ($scope,mainSrv){
+  $scope.locations = [];
 
-  $scope.test2 = "THIS IS THE LOCATIONS";
+  $scope.getTravelInfo = function(){
+    $scope.locations = mainSrv.getTravelInfo();
+  }
+  $scope.getTravelInfo();
+
 })
