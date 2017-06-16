@@ -1,3 +1,3 @@
-angular.module('devmtnTravel').controller('aboutCtrl',function($scope,$stateParams,mainSrv){
+angular.module('devmtnTravel').controller('aboutCtrl',function($scope){
 
 })

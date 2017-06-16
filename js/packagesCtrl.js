@@ -9,4 +9,8 @@ $scope.selectedPackInfo = function(country){
 
 $scope.selectedPackInfo($stateParams);
 console.log($scope.locations);
+
+
+
+
 })

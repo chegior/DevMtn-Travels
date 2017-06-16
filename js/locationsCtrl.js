@@ -5,5 +5,5 @@ angular.module('devmtnTravel').controller('locationsCtrl',function ($scope,mainS
     $scope.locations = mainSrv.getTravelInfo();
   }
   $scope.getTravelInfo();
-
+  
 })

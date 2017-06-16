@@ -4,13 +4,14 @@ angular.module('devmtnTravel', ['ui.router'])
             .state('home',{
                 url:'/',
                 templateUrl: "../views/about.html",
-                
+
 
             })
-            .state('adventures',{
-                url:'/adventures/',
+            .state('adventurers',{
+                url:'/adventurers/',
                 parent:'home',
-                templateUrl:'../views/about-adventurers.html'
+                templateUrl:'../views/about-adventurers.html',
+                controller:'aboutCtrl'
             })
             .state('contact',{
                 url:'/contact',
