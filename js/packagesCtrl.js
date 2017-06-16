@@ -1,17 +1,16 @@
 angular.module('devmtnTravel').controller('packagesCtrl',function ($scope,$stateParams,mainSrv){
 // injected $stateParams due to this process some data on the URL
-
-console.log($stateParams.country);
+var country = $stateParams.country;
+// console.log($stateParams.country);
 $scope.locations = [];
 
-$scope.selectedPackInfo = function(country){
-  $scope.locations = mainSrv.getPackages(country);
+$scope.selectedPackInfo = function(id){
+  $scope.locations = mainSrv.getPackages(id);
 }
-if(!$stateParams){
-  console.log('NONE ON PACKAGES')
+if(!$stateParams.country){
+  console.log('CLICK DIRECT ON PACKAGES')
 }
-
-$scope.selectedPackInfo($stateParams);
+$scope.selectedPackInfo( $stateParams.country);
 
 console.log($scope.locations);
 

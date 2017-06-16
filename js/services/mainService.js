@@ -91,8 +91,8 @@ angular.module('devmtnTravel').service('mainSrv', function(){
     this.getCountryPackages = function(id){
       var selectedCountry = {};
       for( var i = 0; i < this.packageInfo.length; i++){
-        console.log(i+' '+this.packageInfo[i].id );
-        console.log(id);
+        // console.log(i+' '+this.packageInfo[i].id );
+        // console.log(id);
         if(this.packageInfo[i].id === parseInt(id.id)){
           selectedCountry = this.packageInfo[i];
             console.log('MATCH')
@@ -110,10 +110,13 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 ///////////////////////////////////////////////////////////////////////////////////////
     this.getPackages = function(country){
       var selectedPackInfo = [];
-      console.log('GetPACKA   ' + country.country)
+      if('' === country){
+        return this.packageInfo;
+      }
+      // console.log('GetPACKA   ' + country.country)
       for( var i = 0; i < this.packageInfo.length; i++){
-        console.log('ind '+i+'val '+this.packageInfo[i]);
-        if(this.packageInfo[i].country === country.country){
+        // console.log('ind '+i+'val '+this.packageInfo[i]);
+        if(this.packageInfo[i].country === country){
           selectedPackInfo.push(this.packageInfo[i])
         }
       }
